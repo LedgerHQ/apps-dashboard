@@ -8,7 +8,18 @@
       "type": "string"
     },
     "repo": {
-      "type": "string"
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string"
+        },
+        "branch": {
+          "type": "string"
+        },
+        "commit": {
+          "type": "string"
+        }
+      }
     }
   },
   "required": [

@@ -1,2 +1,5 @@
 name: XRP
-repo: https://github.com/LedgerHQ/app-xrp
+repo:
+  url: https://github.com/LedgerHQ/app-xrp
+  branch: master
+  commit: 066af6b3c224de8f36451fe647e0396dcc18d1f7
