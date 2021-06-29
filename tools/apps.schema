@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "App",
+  "type": "object",
+  "description": "Ledger app",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "repo": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "repo"
+  ],
+  "additionalProperties": false
+}
