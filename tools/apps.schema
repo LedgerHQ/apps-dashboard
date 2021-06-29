@@ -7,6 +7,13 @@
     "name": {
       "type": "string"
     },
+    "status": {
+      "enum": [
+        "reviewed",
+        "changes-requested",
+        "pending"
+      ]
+    },
     "repo": {
       "type": "object",
       "properties": {
@@ -24,7 +31,9 @@
   },
   "required": [
     "name",
-    "repo"
+    "repo",
+    "status"
   ],
   "additionalProperties": false
 }
+

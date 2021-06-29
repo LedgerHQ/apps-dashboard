@@ -1,4 +1,5 @@
 name: XRP
+status: reviewed
 repo:
   url: https://github.com/LedgerHQ/app-xrp
   branch: master
