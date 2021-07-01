@@ -88,6 +88,11 @@
             tr.insertCell(-1);
         }
 
+        // TODO: HTML encode
+        var comments = "comments" in app ? apps["comments"] : "";
+        tabCell = tr.insertCell(-1);
+        tabCell.innerHTML = "<pre>" + comments + "</pre>";
+
         // sort the table only once, when all apps are retrieved.
         if (table.rows.length - 1 == number_of_apps) {
             console.log("sorting table");
@@ -165,7 +170,7 @@
     <div id="blah">
       <table id="appTable">
         <tbody>
-          <tr><th>Type</th><th>Name</th><th>Status</th><th>CI</th><th>Scan-build</th><th>Coverity</th><th>Unit Tests</th><th>Speculos Tests</th><th>Fuzzing</th></tr>
+          <tr><th>Type</th><th>Name</th><th>Status</th><th>CI</th><th>Scan-build</th><th>Coverity</th><th>Unit Tests</th><th>Speculos Tests</th><th>Fuzzing</th><th>Comments</th></tr>
         </tbody>
       </table>
     </div>

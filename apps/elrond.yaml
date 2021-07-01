@@ -12,3 +12,4 @@ testing:
   speculos-tests: true
   unit-tests: true
   fuzzing: true
+comments: There is a CI file but it doesn't seem to be used.
