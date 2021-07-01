@@ -1,13 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Read data from External JSON file using JavaScript</title>
+    <title>Apps Dashboard</title>
     <meta charset="utf-8">
     <!-- https://www.encodedna.com/javascript/practice-ground/default.htm?pg=create_html_table_using_json_data_from_external_file -->
 
     <script type="application/javascript" src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
 
 <script>
+    // https://stackoverflow.com/a/53889846
+    function sortTable(table, order, selector) {
+        selector = selector || 'th:first-child, td:nth-child(2)';
+        var asc = order === 'asc';
+
+        var tbody = table.querySelector('tbody') || table;
+        var nodes = tbody.querySelectorAll('tr');
+        var sortedNodes = Array.prototype.slice.apply(nodes, [1]); // skip header
+        sortedNodes.sort(function (a, b) {
+            var textA = a.querySelector(selector).textContent;
+            var textB = b.querySelector(selector).textContent;
+            if (asc) {
+                var temp = textB;
+                textB = textA;
+                textA = temp;
+            }
+            return textA.localeCompare(textB);
+        });
+        tbody.textContent = '';
+        tbody.appendChild(nodes[0]); // header
+        for (var i = 0; i < sortedNodes.length; i++) {
+            tbody.appendChild(sortedNodes[i]);
+        }
+    }
+
     function add_testing_cell(app, tr, name) {
         var tabCell = tr.insertCell(-1);
         if (name in app["testing"]) {
@@ -20,16 +45,18 @@
         }
     }
 
-    function add_app(app) {
+    function add_app(app, number_of_apps) {
         var table = document.getElementById("appTable");
-        var tr = table.insertRow(-1);
 
+        console.log("adding app " + app["name"] + " (" + table.rows.length + "/" + number_of_apps + ")");
+
+        var tr = table.insertRow(-1);
         var tabCell = tr.insertCell(-1);
         if (app["type"] == "coin") {
-            //'<img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/twitter/282/coin_1fa99.png" width="24" height="24"/>'
-            tabCell.innerHTML = "🪙";
+            tabCell.innerHTML = '<img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/twitter/282/coin_1fa99.png" width="24" height="24"/>'
+            //tabCell.innerHTML = "🪙";
         } else if (app["type"] == "dev") {
-            tabCell.innerHTML = "🧑‍💻";
+            tabCell.innerHTML = "👨‍💻";
         } else  {
             tabCell.innerHTML = "?";
         }
@@ -57,9 +84,14 @@
             tr.insertCell(-1);
         }
 
+        // sort the table only once, when all apps are retrieved.
+        if (table.rows.length - 1 == number_of_apps) {
+            console.log("sorting table");
+            sortTable(table, "desc");
+        }
     }
 
-    function retrieve_app(url) {
+    function retrieve_app(url, number_of_apps) {
         var xhr = new XMLHttpRequest();
         xhr.open("GET", url, true);
         xhr.onload = function (e) {
@@ -68,7 +100,7 @@
               //console.log(xhr.responseText);
               const jsonData = jsyaml.load(xhr.responseText);
               //console.log(jsonData);
-              add_app(jsonData);
+              add_app(jsonData, number_of_apps);
             } else {
               console.log("failed to retrieve app at " + url);
               console.error(xhr.statusText);
@@ -90,7 +122,7 @@
                 var data = xhr.responseText;
                 var json = JSON.parse(data);
                 var urls = json.map(function (x) { return x["download_url"]; }, data);
-                urls.map(retrieve_app);
+                urls.map(function (url) { retrieve_app(url, urls.length); });
             } else {
               console.log("failed to retrieve apps list");
               console.error(xhr.statusText);
