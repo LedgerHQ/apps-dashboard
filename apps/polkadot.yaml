@@ -1,0 +1,8 @@
+name: polkadot
+type: coin
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/app-polkadot.git
+  branch: master
+sources:
+  directory: app

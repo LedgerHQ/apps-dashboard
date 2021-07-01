@@ -1,0 +1,6 @@
+name: woleet
+type: coin
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/app-woleet.git
+  branch: master

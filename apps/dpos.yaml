@@ -1,0 +1,6 @@
+name: dpos
+type: coin
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/app-dpos.git
+  branch: master

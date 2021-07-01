@@ -1,0 +1,6 @@
+name: ardor
+type: coin
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/app-ardor.git
+  branch: master

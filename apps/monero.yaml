@@ -1,0 +1,6 @@
+name: monero
+type: coin
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/app-monero.git
+  branch: master

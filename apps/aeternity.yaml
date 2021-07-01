@@ -1,0 +1,6 @@
+name: aeternity
+type: coin
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/app-aeternity.git
+  branch: master

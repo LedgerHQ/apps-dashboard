@@ -1,0 +1,6 @@
+name: fic
+type: coin
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/app-fic.git
+  branch: master

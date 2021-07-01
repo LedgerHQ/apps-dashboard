@@ -1,0 +1,6 @@
+name: solana
+type: coin
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/app-solana.git
+  branch: master

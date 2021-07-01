@@ -1,0 +1,8 @@
+name: near
+type: coin
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/app-near.git
+  branch: master
+sources:
+  directory: workdir/app-near

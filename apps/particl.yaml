@@ -1,0 +1,6 @@
+name: particl
+type: coin
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/app-particl.git
+  branch: master

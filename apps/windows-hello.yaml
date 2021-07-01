@@ -1,0 +1,6 @@
+name: windows-hello
+type: dev
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/app-windows-hello.git
+  branch: master

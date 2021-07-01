@@ -1,0 +1,6 @@
+name: ethereum
+type: coin
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/app-ethereum.git
+  branch: master

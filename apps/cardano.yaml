@@ -1,0 +1,6 @@
+name: cardano
+type: coin
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/app-cardano.git
+  branch: master

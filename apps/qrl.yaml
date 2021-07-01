@@ -1,0 +1,6 @@
+name: qrl
+type: coin
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/app-qrl.git
+  branch: master

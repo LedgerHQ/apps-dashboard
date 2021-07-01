@@ -1,0 +1,6 @@
+name: elastos
+type: coin
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/app-elastos.git
+  branch: master

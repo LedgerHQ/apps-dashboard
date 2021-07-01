@@ -1,0 +1,6 @@
+name: waves
+type: coin
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/app-waves.git
+  branch: master

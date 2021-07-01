@@ -1,0 +1,6 @@
+name: ssh-agent
+type: dev
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/app-ssh-agent.git
+  branch: master

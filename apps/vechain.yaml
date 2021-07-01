@@ -1,0 +1,6 @@
+name: vechain
+type: coin
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/app-vechain.git
+  branch: master

@@ -1,0 +1,6 @@
+name: algorand
+type: coin
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/app-algorand.git
+  branch: master

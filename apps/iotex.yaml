@@ -1,0 +1,6 @@
+name: iotex
+type: coin
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/app-iotex.git
+  branch: master

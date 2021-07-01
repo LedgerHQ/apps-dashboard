@@ -1,0 +1,6 @@
+name: tendermint
+type: coin
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/app-tendermint.git
+  branch: master

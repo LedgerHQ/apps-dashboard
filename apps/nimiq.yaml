@@ -1,0 +1,6 @@
+name: nimiq
+type: coin
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/app-nimiq.git
+  branch: master

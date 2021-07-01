@@ -1,0 +1,8 @@
+name: flow
+type: coin
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/app-flow.git
+  branch: master
+sources:
+  directory: app

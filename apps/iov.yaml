@@ -1,0 +1,8 @@
+name: iov
+type: coin
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/app-iov.git
+  branch: master
+sources:
+  directory: app

@@ -1,0 +1,6 @@
+name: kin
+type: coin
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/app-kin.git
+  branch: master

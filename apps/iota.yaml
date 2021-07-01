@@ -1,0 +1,6 @@
+name: iota
+type: coin
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/app-iota.git
+  branch: master

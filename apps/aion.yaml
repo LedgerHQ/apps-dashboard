@@ -1,0 +1,6 @@
+name: aion
+type: coin
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/app-aion.git
+  branch: master

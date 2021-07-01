@@ -1,0 +1,6 @@
+name: recovery-check
+type: dev
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/app-recovery-check.git
+  branch: master

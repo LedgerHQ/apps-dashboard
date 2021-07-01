@@ -1,0 +1,6 @@
+name: OpenGPG
+type: dev
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/openpgp-card-app.git
+  branch: master

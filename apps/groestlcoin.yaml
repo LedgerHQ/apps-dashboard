@@ -1,0 +1,6 @@
+name: groestlcoin
+type: coin
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/app-groestlcoin.git
+  branch: master

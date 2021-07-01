@@ -1,0 +1,6 @@
+name: nervos
+type: coin
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/app-nervos.git
+  branch: master

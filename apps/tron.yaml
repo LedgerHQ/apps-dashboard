@@ -1,0 +1,6 @@
+name: tron
+type: coin
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/app-tron.git
+  branch: master

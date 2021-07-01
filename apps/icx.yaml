@@ -1,0 +1,6 @@
+name: icx
+type: coin
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/app-icx.git
+  branch: master

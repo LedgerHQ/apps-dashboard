@@ -1,0 +1,8 @@
+name: cosmos
+type: coin
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/app-cosmos.git
+  branch: master
+sources:
+  directory: app

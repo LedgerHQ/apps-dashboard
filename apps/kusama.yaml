@@ -1,0 +1,8 @@
+name: kusama
+type: coin
+status: unknown
+repo:
+  url: https://github.com/LedgerHQ/app-kusama.git
+  branch: master
+sources:
+  directory: app
