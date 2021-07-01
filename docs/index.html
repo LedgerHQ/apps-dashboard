@@ -68,6 +68,8 @@
         tabCell.innerHTML = app["status"] == "unknown" ? "?" : app["status"];
         if (app["status"] == "reviewed") {
             tabCell.bgColor = "lime";
+        } else if (app["status"] == "pending") {
+            tabCell.bgColor = "gold";
         }
 
         if ("testing" in app) {
