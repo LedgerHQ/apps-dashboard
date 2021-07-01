@@ -6,8 +6,8 @@ repo:
   branch: master
   commit: 540566324c6cfc885b384fc367c25b62d6879f49
 testing:
-  ci: no
-  scan-build: no
-  coverity: no
+  ci: false
+  scan-build: false
+  coverity: false
   tests: true
   fuzzing: true
