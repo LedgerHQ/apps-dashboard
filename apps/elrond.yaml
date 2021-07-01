@@ -1,6 +1,6 @@
 name: Elrond
 type: coin
-status: unknown
+status: reviewed
 repo:
   url: https://github.com/LedgerHQ/app-elrond.git
   branch: master
