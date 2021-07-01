@@ -16,8 +16,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          apt update -q
-          apt install -qy jq python3-jsonschema python3-yaml
+          sudo apt-get update -q
+          sudo apt-get install -qy jq python3-jsonschema python3-yaml
 
       - name: Validate YAML
         run: |
