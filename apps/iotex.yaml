@@ -1,6 +1,6 @@
-name: iotex
+name: IoTeX
 type: coin
-status: unknown
+status: reviewed
 repo:
   url: https://github.com/LedgerHQ/app-iotex.git
   branch: master

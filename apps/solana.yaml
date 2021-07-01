@@ -1,6 +1,6 @@
-name: solana
+name: Solana
 type: coin
-status: unknown
+status: reviewed
 repo:
   url: https://github.com/LedgerHQ/app-solana.git
   branch: master

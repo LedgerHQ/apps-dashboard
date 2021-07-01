@@ -1,6 +1,6 @@
-name: terra
+name: Terra
 type: coin
-status: unknown
+status: reviewed
 repo:
   url: https://github.com/LedgerHQ/app-terra.git
   branch: master

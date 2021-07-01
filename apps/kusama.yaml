@@ -1,6 +1,6 @@
-name: kusama
+name: Kusama
 type: coin
-status: unknown
+status: reviewed
 repo:
   url: https://github.com/LedgerHQ/app-kusama.git
   branch: master

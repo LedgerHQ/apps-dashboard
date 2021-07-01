@@ -1,6 +1,6 @@
-name: nem
+name: NEM
 type: coin
-status: unknown
+status: reviewed
 repo:
   url: https://github.com/LedgerHQ/app-nem.git
   branch: master

@@ -1,6 +1,12 @@
-name: algorand
+name: Algorand
 type: coin
-status: unknown
+status: reviewed
 repo:
   url: https://github.com/LedgerHQ/app-algorand.git
   branch: master
+testing:
+  ci: true
+  scan-build: true
+  coverity: true
+  tests: true
+  fuzzing: true

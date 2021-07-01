@@ -1,6 +1,6 @@
-name: filecoin
+name: Filecoin
 type: coin
-status: unknown
+status: reviewed
 repo:
   url: https://github.com/LedgerHQ/app-filecoin.git
   branch: master

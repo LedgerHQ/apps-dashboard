@@ -1,6 +1,6 @@
-name: flow
+name: Flow
 type: coin
-status: unknown
+status: reviewed
 repo:
   url: https://github.com/LedgerHQ/app-flow.git
   branch: master
