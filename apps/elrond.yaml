@@ -9,5 +9,6 @@ testing:
   ci: false
   scan-build: false
   coverity: false
-  tests: true
+  speculos-tests: true
+  unit-tests: true
   fuzzing: true

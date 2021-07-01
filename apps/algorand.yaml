@@ -8,5 +8,6 @@ testing:
   ci: true
   scan-build: true
   coverity: true
-  tests: true
+  speculos-tests: true
+  unit-tests: true
   fuzzing: true

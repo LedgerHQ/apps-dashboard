@@ -60,7 +60,10 @@
         "coverity": {
           "type": "boolean"
         },
-        "tests": {
+        "speculos-tests": {
+          "type": "boolean"
+        },
+        "unit-tests": {
           "type": "boolean"
         },
         "fuzzing": {
@@ -68,6 +71,9 @@
         }
       },
       "additionalProperties": false
+    },
+    "comments": {
+      "type": "string"
     }
   },
   "required": [

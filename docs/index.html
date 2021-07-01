@@ -76,9 +76,11 @@
             add_testing_cell(app, tr, "ci");
             add_testing_cell(app, tr, "scan-build");
             add_testing_cell(app, tr, "coverity");
-            add_testing_cell(app, tr, "tests");
+            add_testing_cell(app, tr, "speculos-tests");
+            add_testing_cell(app, tr, "unit-tests");
             add_testing_cell(app, tr, "fuzzing");
         } else {
+            tr.insertCell(-1);
             tr.insertCell(-1);
             tr.insertCell(-1);
             tr.insertCell(-1);
@@ -163,7 +165,7 @@
     <div id="blah">
       <table id="appTable">
         <tbody>
-          <tr><th>Type</th><th>Name</th><th>Status</th><th>CI</th><th>Scan-build</th><th>Coverity</th><th>Tests</th><th>Fuzzing</th></tr>
+          <tr><th>Type</th><th>Name</th><th>Status</th><th>CI</th><th>Scan-build</th><th>Coverity</th><th>Unit Tests</th><th>Speculos Tests</th><th>Fuzzing</th></tr>
         </tbody>
       </table>
     </div>
