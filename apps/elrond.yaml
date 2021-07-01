@@ -1,6 +1,13 @@
-name: elrond
+name: Elrond
 type: coin
 status: unknown
 repo:
   url: https://github.com/LedgerHQ/app-elrond.git
   branch: master
+  commit: 540566324c6cfc885b384fc367c25b62d6879f49
+testing:
+  ci: no
+  scan-build: no
+  coverity: no
+  tests: true
+  fuzzing: true
