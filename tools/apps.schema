@@ -32,6 +32,15 @@
       ],
       "additionalProperties": false
     },
+    "sources": {
+      "type": "object",
+      "properties": {
+        "directory": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
     "testing": {
       "type": "object",
       "properties": {
