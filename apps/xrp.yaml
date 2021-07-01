@@ -1,4 +1,5 @@
 name: XRP
+type: coin
 status: reviewed
 repo:
   url: https://github.com/LedgerHQ/app-xrp

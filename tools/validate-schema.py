@@ -11,6 +11,7 @@ correctly:
 
 import glob
 import jsonschema
+import logging
 import os
 import yaml
 
@@ -25,6 +26,7 @@ def validate_yaml(path, validator):
     """
     Raises jsonschema.exceptions.ValidationError if the yaml file is invalid.
     """
+    logging.info(f"validating {os.path.basename(path)}")
     document = yaml_load(path)
     validator.validate(document)
 

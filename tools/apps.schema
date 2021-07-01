@@ -7,11 +7,18 @@
     "name": {
       "type": "string"
     },
+    "type": {
+      "enum": [
+        "coin",
+        "dev"
+      ]
+    },
     "status": {
       "enum": [
         "reviewed",
         "changes-requested",
-        "pending"
+        "pending",
+        "unknown"
       ]
     },
     "repo": {
@@ -65,6 +72,7 @@
   },
   "required": [
     "name",
+    "type",
     "repo",
     "status"
   ],
