@@ -2,6 +2,11 @@
 
 """
 Validate every yaml files against apps.schema.
+
+Please use the following command to ensure that the schema file is formatted
+correctly:
+
+  $ diff -ruN tools/apps.schema <((cat tools/apps.schema | jq .))
 """
 
 import glob

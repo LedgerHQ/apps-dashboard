@@ -26,7 +26,32 @@
         "commit": {
           "type": "string"
         }
-      }
+      },
+      "required": [
+        "url"
+      ],
+      "additionalProperties": false
+    },
+    "testing": {
+      "type": "object",
+      "properties": {
+        "ci": {
+          "type": "boolean"
+        },
+        "scan-build": {
+          "type": "boolean"
+        },
+        "coverity": {
+          "type": "boolean"
+        },
+        "tests": {
+          "type": "boolean"
+        },
+        "fuzzing": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
     }
   },
   "required": [
@@ -36,4 +61,3 @@
   ],
   "additionalProperties": false
 }
-
