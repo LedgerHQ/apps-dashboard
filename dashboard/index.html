@@ -9,21 +9,6 @@
 
 
 <script>
-    function retrieve_apps_list() {
-        var request = new XMLHttpRequest();
-        request.open("GET", "https://api.github.com/repos/ledgerhq/apps-dashboard/contents/apps/", false);
-        request.send();
-        if (request.status == 200) {
-            var data = request.responseText;
-            var json = JSON.parse(data);
-            var apps = json.map(function (x) { return x["download_url"]; }, data);
-            return apps;
-        } else {
-            console.log("failed to retrieve apps list");
-            return [];
-        }
-    }
-
     function add_testing_cell(app, tr, name) {
         var tabCell = tr.insertCell(-1);
         if (name in app["testing"]) {
@@ -76,21 +61,51 @@
     }
 
     function retrieve_app(url) {
-        var request = new XMLHttpRequest();
-        request.open("GET", url, false);
-        request.send();
-        if (request.status != 200) {
-            console.log("failed to retrieve app " + name);
-            return;
-        }
-        const jsonData = jsyaml.load(request.responseText);
-        //console.log(jsonData);
-        add_app(jsonData);
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", url, true);
+        xhr.onload = function (e) {
+          if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+              //console.log(xhr.responseText);
+              const jsonData = jsyaml.load(xhr.responseText);
+              //console.log(jsonData);
+              add_app(jsonData);
+            } else {
+              console.log("failed to retrieve app at " + url);
+              console.error(xhr.statusText);
+            }
+          }
+        };
+        xhr.onerror = function (e) {
+          console.error(xhr.statusText);
+        };
+        xhr.send(null);
+    }
+
+    function retrieve_apps_list() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://api.github.com/repos/ledgerhq/apps-dashboard/contents/apps/", true);
+        xhr.onload = function (e) {
+          if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                var data = xhr.responseText;
+                var json = JSON.parse(data);
+                var urls = json.map(function (x) { return x["download_url"]; }, data);
+                urls.map(retrieve_app);
+            } else {
+              console.log("failed to retrieve apps list");
+              console.error(xhr.statusText);
+            }
+          }
+        };
+        xhr.onerror = function (e) {
+          console.error(xhr.statusText);
+        };
+        xhr.send(null);
     }
 
     function main() {
-        var urls = retrieve_apps_list();
-        var apps_yaml = urls.map(retrieve_app);
+        retrieve_apps_list();
     }
 </script>
 
