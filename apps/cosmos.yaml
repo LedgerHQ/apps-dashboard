@@ -2,7 +2,7 @@ name: cosmos
 type: coin
 status: unknown
 repo:
-  url: https://github.com/LedgerHQ/app-cosmos.git
+  url: https://github.com/LedgerHQ/app-cosmos
   branch: master
 sources:
   directory: app

@@ -2,5 +2,5 @@ name: neo
 type: coin
 status: unknown
 repo:
-  url: https://github.com/LedgerHQ/app-neo.git
+  url: https://github.com/LedgerHQ/app-neo
   branch: master

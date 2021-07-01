@@ -2,5 +2,5 @@ name: eos
 type: coin
 status: unknown
 repo:
-  url: https://github.com/LedgerHQ/app-eos.git
+  url: https://github.com/LedgerHQ/app-eos
   branch: master

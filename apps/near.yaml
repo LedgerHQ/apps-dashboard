@@ -2,7 +2,7 @@ name: near
 type: coin
 status: unknown
 repo:
-  url: https://github.com/LedgerHQ/app-near.git
+  url: https://github.com/LedgerHQ/app-near
   branch: master
 sources:
   directory: workdir/app-near

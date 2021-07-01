@@ -2,5 +2,5 @@ name: decred
 type: coin
 status: unknown
 repo:
-  url: https://github.com/LedgerHQ/app-decred.git
+  url: https://github.com/LedgerHQ/app-decred
   branch: master

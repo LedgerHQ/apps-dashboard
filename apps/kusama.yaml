@@ -2,7 +2,7 @@ name: Kusama
 type: coin
 status: reviewed
 repo:
-  url: https://github.com/LedgerHQ/app-kusama.git
+  url: https://github.com/LedgerHQ/app-kusama
   branch: master
 sources:
   directory: app

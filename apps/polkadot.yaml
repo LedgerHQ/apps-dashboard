@@ -2,7 +2,7 @@ name: Polkadot
 type: coin
 status: reviewed
 repo:
-  url: https://github.com/LedgerHQ/app-polkadot.git
+  url: https://github.com/LedgerHQ/app-polkadot
   branch: master
 sources:
   directory: app

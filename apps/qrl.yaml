@@ -2,5 +2,5 @@ name: qrl
 type: coin
 status: unknown
 repo:
-  url: https://github.com/LedgerHQ/app-qrl.git
+  url: https://github.com/LedgerHQ/app-qrl
   branch: master

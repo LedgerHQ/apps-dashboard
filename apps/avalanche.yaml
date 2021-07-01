@@ -2,5 +2,5 @@ name: avalanche
 type: coin
 status: unknown
 repo:
-  url: https://github.com/LedgerHQ/app-avalanche.git
+  url: https://github.com/LedgerHQ/app-avalanche
   branch: master

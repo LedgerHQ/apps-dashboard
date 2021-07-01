@@ -2,5 +2,5 @@ name: nano
 type: coin
 status: unknown
 repo:
-  url: https://github.com/LedgerHQ/app-nano.git
+  url: https://github.com/LedgerHQ/app-nano
   branch: master

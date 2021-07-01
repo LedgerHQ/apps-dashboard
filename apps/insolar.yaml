@@ -2,5 +2,5 @@ name: insolar
 type: coin
 status: unknown
 repo:
-  url: https://github.com/LedgerHQ/app-insolar.git
+  url: https://github.com/LedgerHQ/app-insolar
   branch: master

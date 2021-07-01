@@ -2,5 +2,5 @@ name: NEM
 type: coin
 status: reviewed
 repo:
-  url: https://github.com/LedgerHQ/app-nem.git
+  url: https://github.com/LedgerHQ/app-nem
   branch: master

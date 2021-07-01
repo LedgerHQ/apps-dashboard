@@ -2,5 +2,5 @@ name: zilliqa
 type: coin
 status: unknown
 repo:
-  url: https://github.com/LedgerHQ/app-zilliqa.git
+  url: https://github.com/LedgerHQ/app-zilliqa
   branch: master

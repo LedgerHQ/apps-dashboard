@@ -2,5 +2,5 @@ name: ont
 type: coin
 status: unknown
 repo:
-  url: https://github.com/LedgerHQ/app-ont.git
+  url: https://github.com/LedgerHQ/app-ont
   branch: master

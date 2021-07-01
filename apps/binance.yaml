@@ -2,5 +2,5 @@ name: binance
 type: coin
 status: unknown
 repo:
-  url: https://github.com/LedgerHQ/app-binance.git
+  url: https://github.com/LedgerHQ/app-binance
   branch: master

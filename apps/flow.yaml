@@ -2,7 +2,7 @@ name: Flow
 type: coin
 status: reviewed
 repo:
-  url: https://github.com/LedgerHQ/app-flow.git
+  url: https://github.com/LedgerHQ/app-flow
   branch: master
 sources:
   directory: app

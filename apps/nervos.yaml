@@ -2,5 +2,5 @@ name: nervos
 type: coin
 status: unknown
 repo:
-  url: https://github.com/LedgerHQ/app-nervos.git
+  url: https://github.com/LedgerHQ/app-nervos
   branch: master

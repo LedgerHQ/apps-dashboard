@@ -2,5 +2,5 @@ name: factom
 type: coin
 status: unknown
 repo:
-  url: https://github.com/LedgerHQ/app-factom.git
+  url: https://github.com/LedgerHQ/app-factom
   branch: master

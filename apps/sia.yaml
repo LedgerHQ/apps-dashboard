@@ -2,5 +2,5 @@ name: sia
 type: coin
 status: unknown
 repo:
-  url: https://github.com/LedgerHQ/app-sia.git
+  url: https://github.com/LedgerHQ/app-sia
   branch: master

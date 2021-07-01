@@ -2,5 +2,5 @@ name: harmony-one
 type: coin
 status: unknown
 repo:
-  url: https://github.com/LedgerHQ/app-harmony-one.git
+  url: https://github.com/LedgerHQ/app-harmony-one
   branch: master

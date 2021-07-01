@@ -2,5 +2,5 @@ name: hedera
 type: coin
 status: unknown
 repo:
-  url: https://github.com/LedgerHQ/app-hedera.git
+  url: https://github.com/LedgerHQ/app-hedera
   branch: master

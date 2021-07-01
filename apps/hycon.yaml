@@ -2,5 +2,5 @@ name: hycon
 type: coin
 status: unknown
 repo:
-  url: https://github.com/LedgerHQ/app-hycon.git
+  url: https://github.com/LedgerHQ/app-hycon
   branch: master

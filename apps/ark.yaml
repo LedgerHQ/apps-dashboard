@@ -2,5 +2,5 @@ name: ARK
 type: coin
 status: reviewed
 repo:
-  url: https://github.com/LedgerHQ/app-ark.git
+  url: https://github.com/LedgerHQ/app-ark
   branch: master

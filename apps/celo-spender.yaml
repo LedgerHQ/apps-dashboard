@@ -2,5 +2,5 @@ name: celo-spender
 type: coin
 status: unknown
 repo:
-  url: https://github.com/LedgerHQ/app-celo-spender.git
+  url: https://github.com/LedgerHQ/app-celo-spender
   branch: master

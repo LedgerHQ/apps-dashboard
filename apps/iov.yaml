@@ -2,7 +2,7 @@ name: iov
 type: coin
 status: unknown
 repo:
-  url: https://github.com/LedgerHQ/app-iov.git
+  url: https://github.com/LedgerHQ/app-iov
   branch: master
 sources:
   directory: app

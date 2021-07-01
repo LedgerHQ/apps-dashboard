@@ -2,7 +2,7 @@ name: Algorand
 type: coin
 status: reviewed
 repo:
-  url: https://github.com/LedgerHQ/app-algorand.git
+  url: https://github.com/LedgerHQ/app-algorand
   branch: master
 testing:
   ci: true

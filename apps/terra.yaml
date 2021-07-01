@@ -2,5 +2,5 @@ name: Terra
 type: coin
 status: reviewed
 repo:
-  url: https://github.com/LedgerHQ/app-terra.git
+  url: https://github.com/LedgerHQ/app-terra
   branch: master

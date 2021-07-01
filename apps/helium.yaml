@@ -2,5 +2,5 @@ name: helium
 type: coin
 status: unknown
 repo:
-  url: https://github.com/LedgerHQ/app-helium.git
+  url: https://github.com/LedgerHQ/app-helium
   branch: master

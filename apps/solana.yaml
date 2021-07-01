@@ -2,5 +2,5 @@ name: Solana
 type: coin
 status: reviewed
 repo:
-  url: https://github.com/LedgerHQ/app-solana.git
+  url: https://github.com/LedgerHQ/app-solana
   branch: master

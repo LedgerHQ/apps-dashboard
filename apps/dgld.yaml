@@ -2,7 +2,7 @@ name: dgld
 type: coin
 status: unknown
 repo:
-  url: https://github.com/LedgerHQ/app-dgld.git
+  url: https://github.com/LedgerHQ/app-dgld
   branch: master
 sources:
   directory: app

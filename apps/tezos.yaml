@@ -2,5 +2,5 @@ name: tezos
 type: coin
 status: unknown
 repo:
-  url: https://github.com/LedgerHQ/app-tezos.git
+  url: https://github.com/LedgerHQ/app-tezos
   branch: master
