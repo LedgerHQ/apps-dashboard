@@ -101,7 +101,7 @@
         }
 
         // TODO: HTML encode
-        var comments = "comments" in app ? apps["comments"] : "";
+        var comments = "comments" in app ? app["comments"] : "";
         tabCell = tr.insertCell(-1);
         tabCell.innerHTML = "<pre>" + comments + "</pre>";
 
