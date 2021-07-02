@@ -6,7 +6,7 @@ repo:
   branch: master
   commit: 540566324c6cfc885b384fc367c25b62d6879f49
 testing:
-  ci: false
+  ci: []
   scan-build: false
   coverity: false
   speculos-tests: true

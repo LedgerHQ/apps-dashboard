@@ -5,7 +5,9 @@ repo:
   url: https://github.com/LedgerHQ/app-algorand
   branch: master
 testing:
-  ci: true
+  ci:
+    - ci.yml
+    - coverity.yml
   scan-build: true
   coverity: true
   speculos-tests: true
