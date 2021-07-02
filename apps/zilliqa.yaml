@@ -1,6 +1,13 @@
 name: zilliqa
 type: coin
-status: unknown
+status: reviewed 
 repo:
   url: https://github.com/LedgerHQ/app-zilliqa
   branch: master
+testing:
+  ci: false 
+  scan-build: false 
+  coverity: false 
+  speculos-tests: false 
+  unit-tests: false 
+  fuzzing: false
