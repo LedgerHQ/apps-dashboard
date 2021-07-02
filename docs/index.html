@@ -45,6 +45,19 @@
         }
     }
 
+    function add_testing_ci_cell(app, tr) {
+        var tabCell = tr.insertCell(-1);
+        if ("ci" in app["testing"]) {
+            var ci = app["testing"]["ci"];
+            if (ci === []) {
+                tabCell.bgColor = "red";
+            } else {
+                console.log(ci);
+                ci.forEach(function (filename) { tabCell.innerHTML += '<img src="https://github.com/LedgerHQ/app-algorand/actions/workflows/' + filename + '/badge.svg" />'; });
+            }
+        }
+    }
+
     function add_app(app, number_of_apps) {
         var table = document.getElementById("appTable");
 
@@ -73,7 +86,7 @@
         }
 
         if ("testing" in app) {
-            add_testing_cell(app, tr, "ci");
+            add_testing_ci_cell(app, tr);
             add_testing_cell(app, tr, "scan-build");
             add_testing_cell(app, tr, "coverity");
             add_testing_cell(app, tr, "speculos-tests");
