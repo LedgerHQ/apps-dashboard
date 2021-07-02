@@ -9,8 +9,8 @@ Each app is described in a separate YAML file in the `apps/` directory.
 
 Unfortunately, the GitHub API
 [rate limiting rules](https://docs.github.com/en/rest/overview/resources-in-the-rest-api#rate-limiting)
-is quite strict for unauthenticated requests (the rate limit allows for up to 60
-requests per hour).
+are quite strict for unauthenticated requests (the rate limit allows for up to
+60 requests per hour).
 
 The solution is to
 [create](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)
