@@ -1,6 +1,13 @@
 name: cardano
 type: coin
-status: unknown
+status: reviewed 
 repo:
   url: https://github.com/LedgerHQ/app-cardano
   branch: master
+testing:
+  ci: [] 
+  scan-build: false 
+  coverity: false 
+  speculos-tests: false 
+  unit-tests: true
+  fuzzing: true

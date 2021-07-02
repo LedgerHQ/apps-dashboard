@@ -1,6 +1,14 @@
 name: iota
 type: coin
-status: unknown
+status: reviewed 
 repo:
   url: https://github.com/LedgerHQ/app-iota
   branch: master
+testing:
+  ci: [] 
+  scan-build: false 
+  coverity: false 
+  speculos-tests: false 
+  unit-tests: false 
+  fuzzing: false
+
