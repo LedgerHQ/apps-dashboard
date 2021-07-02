@@ -4,7 +4,6 @@ status: reviewed
 repo:
   url: https://github.com/LedgerHQ/app-elrond
   branch: master
-  commit: 540566324c6cfc885b384fc367c25b62d6879f49
 testing:
   scan-build: false
   coverity: false

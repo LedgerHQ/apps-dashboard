@@ -29,9 +29,6 @@
         },
         "branch": {
           "type": "string"
-        },
-        "commit": {
-          "type": "string"
         }
       },
       "required": [
