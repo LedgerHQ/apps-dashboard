@@ -16,3 +16,13 @@ following dependencies are required:
 ```shell
 apt install jq python3-jsonschema python3-yaml
 ```
+
+
+### How to run the dashboard locally
+
+Run the following script and go to
+[https://127.0.0.1:4433/docs/index.html](https://127.0.0.1:4433/docs/index.html):
+
+```shell
+./tools/webserver.py
+```
