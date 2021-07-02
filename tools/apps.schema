@@ -51,16 +51,6 @@
     "testing": {
       "type": "object",
       "properties": {
-        "ci": {
-          "type": "array",
-          "items": [
-            {
-              "type": [
-                "string"
-              ]
-            }
-          ]
-        },
         "scan-build": {
           "type": "boolean"
         },

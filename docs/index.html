@@ -45,22 +45,56 @@
         }
     }
 
-    function add_testing_ci_cell(app, tr) {
-        var tabCell = tr.insertCell(-1);
-        if ("ci" in app["testing"]) {
-            var ci = app["testing"]["ci"];
-            if (ci === []) {
-                tabCell.bgColor = "red";
-            } else {
-                ci.forEach(function (filename) { tabCell.innerHTML += '<img src="' + app["repo"]["url"] + '/actions/workflows/' + filename + '/badge.svg" /><br />'; });
-            }
+    function add_testing_ci_cell(app, tabCell, workflows) {
+        if (workflows.total_count == 0 || workflows["workflows"].length == 0) {
+            tabCell.bgColor = "red";
+        } else {
+            workflows["workflows"].forEach(function (workflow) { tabCell.innerHTML += '<img src="' + workflow["badge_url"] + '"/>'; });
         }
+    }
+
+    // https://127.0.0.1:4433/docs/index.html#token=username:ghp_xxx
+    function set_auth(xhr) {
+        var hash = window.location.hash.substr(1);
+        var parameters = hash.split('&').reduce(function (res, item) {
+            var parts = item.split('=');
+            res[parts[0]] = parts[1];
+            return res;
+        }, {});
+        if ("token" in parameters) {
+            xhr.setRequestHeader("Authorization", "Basic " + window.btoa(unescape(encodeURIComponent(parameters["token"]))));
+        }
+    }
+
+    function get_workflow_files(app, tabCell) {
+        var l = app["repo"]["url"].replace("https://github.com/", "").split("/");
+        var owner = l[0];
+        var repo = l[1];
+
+        var url = "https://api.github.com/repos/" + owner + "/" + repo + "/actions/workflows";
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", url, true);
+        set_auth(xhr);
+        xhr.onload = function (e) {
+          if (xhr.readyState === 4) {
+            if (xhr.status === 200) {
+                var workflows = JSON.parse(xhr.responseText);
+                add_testing_ci_cell(app, tabCell, workflows);
+            } else {
+                console.log("unexpected status for " + url);
+            }
+          }
+        };
+        xhr.onerror = function (e) {
+          console.error(xhr.statusText);
+        };
+        xhr.send(null);
     }
 
     function add_app(app, number_of_apps) {
         var table = document.getElementById("appTable");
 
-        console.log("adding app " + app["name"] + " (" + table.rows.length + "/" + number_of_apps + ")");
+        //console.log("adding app " + app["name"] + " (" + table.rows.length + "/" + number_of_apps + ")");
 
         var tr = table.insertRow(-1);
         var tabCell = tr.insertCell(-1);
@@ -84,15 +118,16 @@
             tabCell.bgColor = "gold";
         }
 
+        var tabCell = tr.insertCell(-1);
+        get_workflow_files(app, tabCell);
+
         if ("testing" in app) {
-            add_testing_ci_cell(app, tr);
             add_testing_cell(app, tr, "scan-build");
             add_testing_cell(app, tr, "coverity");
             add_testing_cell(app, tr, "speculos-tests");
             add_testing_cell(app, tr, "unit-tests");
             add_testing_cell(app, tr, "fuzzing");
         } else {
-            tr.insertCell(-1);
             tr.insertCell(-1);
             tr.insertCell(-1);
             tr.insertCell(-1);
@@ -107,7 +142,7 @@
 
         // sort the table only once, when all apps are retrieved.
         if (table.rows.length - 1 == number_of_apps) {
-            console.log("sorting table");
+            //console.log("sorting table");
             sortTable(table, "desc");
         }
     }
@@ -138,9 +173,9 @@
         var json = JSON.parse(data);
         // if the dashboard is served locally, return the local URL instead of the one from github.com
         if (["127.0.0.1", "localhost"].includes(window.location.hostname)) {
-            return json.map(function (x) { return window.origin + "/" + x["path"]; }, data);
+            return json.map(function (x) { return window.origin + "/" + x["path"]; });
         } else {
-            return json.map(function (x) { return x["download_url"]; }, data);
+            return json.map(function (x) { return x["download_url"]; });
         }
     }
 
@@ -148,6 +183,7 @@
         var xhr = new XMLHttpRequest();
         var url = "https://api.github.com/repos/ledgerhq/apps-dashboard/contents/apps";
         xhr.open("GET", url, true);
+        set_auth(xhr);
         xhr.onload = function (e) {
           if (xhr.readyState === 4) {
             if (xhr.status === 200) {
@@ -167,6 +203,8 @@
 
     function main() {
         retrieve_apps_list();
+        //retrieve_app("https://127.0.0.1:4433/apps/cardano.yaml");
+        //retrieve_app("https://127.0.0.1:4433/apps/xrp.yaml");
     }
 </script>
 
