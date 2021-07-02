@@ -5,7 +5,7 @@ repo:
   url: https://github.com/LedgerHQ/app-iota
   branch: master
 testing:
-  ci: false 
+  ci: [] 
   scan-build: false 
   coverity: false 
   speculos-tests: false 
