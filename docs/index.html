@@ -52,8 +52,7 @@
             if (ci === []) {
                 tabCell.bgColor = "red";
             } else {
-                console.log(ci);
-                ci.forEach(function (filename) { tabCell.innerHTML += '<img src="https://github.com/LedgerHQ/app-algorand/actions/workflows/' + filename + '/badge.svg" />'; });
+                ci.forEach(function (filename) { tabCell.innerHTML += '<img src="' + app["repo"]["url"] + '/actions/workflows/' + filename + '/badge.svg" /><br />'; });
             }
         }
     }
