@@ -32,6 +32,7 @@ def validate_yaml(path, validator):
 
 
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO)
     script_dir = os.path.dirname(os.path.realpath(__file__))
 
     schema_file = os.path.join(script_dir, "apps.schema")
