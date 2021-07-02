@@ -134,15 +134,24 @@
         xhr.send(null);
     }
 
+    function get_app_urls(data) {
+        var json = JSON.parse(data);
+        // if the dashboard is served locally, return the local URL instead of the one from github.com
+        if (["127.0.0.1", "localhost"].includes(window.location.hostname)) {
+            return json.map(function (x) { return window.origin + "/" + x["path"]; }, data);
+        } else {
+            return json.map(function (x) { return x["download_url"]; }, data);
+        }
+    }
+
     function retrieve_apps_list() {
         var xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://api.github.com/repos/ledgerhq/apps-dashboard/contents/apps/", true);
+        var url = "https://api.github.com/repos/ledgerhq/apps-dashboard/contents/apps";
+        xhr.open("GET", url, true);
         xhr.onload = function (e) {
           if (xhr.readyState === 4) {
             if (xhr.status === 200) {
-                var data = xhr.responseText;
-                var json = JSON.parse(data);
-                var urls = json.map(function (x) { return x["download_url"]; }, data);
+                var urls = get_app_urls(xhr.responseText);
                 urls.map(function (url) { retrieve_app(url, urls.length); });
             } else {
               console.log("failed to retrieve apps list");
