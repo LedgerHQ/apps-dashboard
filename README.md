@@ -9,7 +9,7 @@ Each app is described in a separate YAML file in the `apps/` directory.
 
 Contributions should be made through pull requests, which should be reviewed
 before being merged to the `main` branch. External contributors who are outside
-of [https://github.com/LedgerHQ/](LedgerHQ) organization aren't expected.
+of [LedgerHQ](https://github.com/LedgerHQ/) organization aren't expected.
 
 Please run `./tools/validate-schema.py` after having modified a YAML file. The
 following dependencies are required:
