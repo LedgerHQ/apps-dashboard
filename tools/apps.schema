@@ -52,7 +52,14 @@
       "type": "object",
       "properties": {
         "ci": {
-          "type": "boolean"
+          "type": "array",
+          "items": [
+            {
+              "type": [
+                "string"
+              ]
+            }
+          ]
         },
         "scan-build": {
           "type": "boolean"
