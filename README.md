@@ -21,6 +21,9 @@ location. Eg.
 /index.html#token=username:ghp_IlNE7ysuXOdh7Bk2yYgFAs0e7heqCA357Qxg
 ```
 
+When creating the PAT, no scope is needed (all checkboxes can be left unticked).
+This is because it is only used to read public information on GitHub API.
+
 That isn't super convenient, if you find a better way to use the token, please
 tell us.
 
